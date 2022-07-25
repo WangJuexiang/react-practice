@@ -1,0 +1,12 @@
+redux 状态管理——组件状态共享
+
+三大核心概念:
+
+1.Action Creator：包含本次操作的类型(唯一字符串)和数据(任意类型)
+传递行为给store
+2.Store:
+传递行为给reducers，并且传递原来的状态
+3.Reducers
+返回加工后的newState给store，也可以初始化状态
+
+组件从store中使用getState方法取newState
