@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-//引入store，用于获取redux中保存状态
+//引入store，用于获取redux中保存的状态
 import store from '../../redux/store'
 
 export default class Count extends Component {
 
-	state = { carName: '奔驰c63' }//随便定义组内自有状态，但归redux管理的可以省略
+	state = { languageName: 'react-redux' }//随便定义组内自有状态，但归redux管理的可以省略
 
 	/* componentDidMount(){
 		//检测redux中状态的变化，只要变化，就调用render
@@ -16,6 +16,7 @@ export default class Count extends Component {
 	//加法
 	increment = () => {
 		const { value } = this.selectNumber
+
 		store.dispatch({ type: 'increment', data: value * 1 })
 	}
 	//减法
@@ -50,8 +51,8 @@ export default class Count extends Component {
 				</select>&nbsp;
 				<button onClick={this.increment}>+</button>&nbsp;
 				<button onClick={this.decrement}>-</button>&nbsp;
-				<button onClick={this.incrementIfOdd}>当前求和为奇数再加</button>&nbsp;
-				<button onClick={this.incrementAsync}>异步加</button>&nbsp;
+				<button onClick={this.incrementIfOdd}>当前求和为奇数时运算加法</button>&nbsp;
+				<button onClick={this.incrementAsync}>异步加法</button>&nbsp;
 			</div>
 		)
 	}

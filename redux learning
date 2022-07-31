@@ -10,3 +10,28 @@ redux 状态管理——组件状态共享
 返回加工后的newState给store，也可以初始化状态
 
 组件从store中使用getState方法取newState
+
+
+api:
+1.getState()————组件从store中拿更新后的newState
+2.store.dispatch()告诉store要更改的行为和数据 
+3.store.subscribe()————订阅redux内部状态的更改
+
+精简版redux案例思路：
+1.去除Count组件自身状态（只是在redux中共享的状态）
+2.在src下建立
+-redux
+ -store.js
+ -count_reducer.js
+
+
+
+
+
+创建redux文件夹
+创建store和reducer文件
+
+精简版demo：先不写action creator
+reducer 作为纯函数，只负责处理基本逻辑，判断放在dispatch或组件内
+
+路由：点击跳转页面

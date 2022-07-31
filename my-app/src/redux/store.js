@@ -11,6 +11,3 @@ export default legacy_createStore(countReducer)
 
 
 
-
-// red
-// export const createStore;
